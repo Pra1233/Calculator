@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var router = (0, express_1.Router)();
+var library_1 = require("../../application/controller/library");
+router.get("/books", library_1.getBooks);
+router.post("/book", library_1.createBook);
+router.delete("/book/:id", library_1.deleteBook);
+router.put("/book/update/:id", library_1.updateBook);
+exports.default = router;
